@@ -14,7 +14,7 @@ export function StatsCards({ sx, icon, statsCardTitle, cardStats, icon_color,bg_
   const theme = useTheme();
 
   return (
-    <Card sx={{ py: 3, pl: 3, pr: 2.5,mt:5, ...sx }} {...other}>
+    <Card sx={{ py: 3, pl: 3, pr: 2.5,mt:{xs:3,md:5}, ...sx }} {...other}>
       <Box sx={{ flexGrow: 1 }}>
         <Box sx={{ typography: 'h3' }}>{cardStats}</Box>
         <Typography noWrap variant="subtitle2" component="div" sx={{ color: 'text.secondary' }}>

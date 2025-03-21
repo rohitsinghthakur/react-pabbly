@@ -42,7 +42,7 @@ export default function Page() {
         {/* 3 cards with stats  */}
         <Box
   sx={{
-    gap: { xs: 0, md: 3 }, // Reduce gap on small screens
+    gap: { xs: 0, md: 3 }, 
     display: "grid",
     gridTemplateColumns: { xs: "repeat(1, 1fr)", md: "repeat(3, 1fr)" },
   }}
