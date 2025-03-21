@@ -5,6 +5,7 @@ import { Box, Card, Button, CardMedia, IconButton, Typography } from '@mui/mater
 // import { _dashboardfolderlist } from 'src/_mock/assets';
 import { DashboardContent } from 'src/layouts/dashboard';
 import { FooterBase } from 'src/layouts/core/footer-base';
+import gethelpThumb from 'src/pages/app/Images/gethelp.png';
 import emailVerificationThum from 'src/pages/app/Images/email-verication-video-thumbnail.jpg';
 
 import { Iconify } from 'src/components/iconify';
@@ -20,24 +21,15 @@ import { listItems } from './dashboard-big-card-list-items';
 export default function Page() {
   const theme = useTheme();
 
-  const TABLE_HEAD = [
-    { id: 'Status/Name/Date', label: 'Status/Name/Date', align: 'left', width: '32%' },
-    {
-      id: 'Number of Emails/Credits Consumed',
-      label: 'Number of Emails/Credits Consumed',
-      align: 'left',
-    },
-    // { id: 'totalAmount', label: 'Price', width: 140 },
-    { id: 'status', label: 'Action', align: 'right', width: '28%', pr: 9 },
-  ];
+  
 
   return (
     <>
       <DashboardContent maxWidth="xl">
         <PageHeader
-          title="Dashboard"
-          description="Verify and manage all your email lists in one place with the Pabbly Email Verification Dashboard."
-          buttonTitle="Verify Email"
+          title="Help & Tutorials"
+          description="Tell us about your problem, and we’ll find you a solution. "
+          showButton={false}
         />
 
         {/* main bottom section */}
@@ -46,19 +38,18 @@ export default function Page() {
           {/* basic simple tree | left component */}
 
           {/* right components  */}
-          <Grid item>
-            <Grid sx={{ mt: 3 }}>
+          <Grid item width="100vw">
+            <Grid sx={{ mt: 4,width:"100%" }}>
               <BigCard
                 items={listItems.items}
                 style={listItems.style}
-                buttontitle="Ask Question"
-                coverSrc={emailVerificationThum}
-                sx
+                coverSrc={gethelpThumb}
                 heading="Points To Remember!"
                 subheading=""
                 showButton="true"
                 buttonText="Ask Question"
                 buttonEndIcon={false}
+                palyButton={false}
               />
             </Grid>
           </Grid>

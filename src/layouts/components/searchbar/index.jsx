@@ -19,8 +19,8 @@ import { ResultItem } from './result-item';
 // ----------------------------------------------------------------------
 const data = [
   { title: 'Folder Name: Magnet Brains', numberOfEmailList: 2 },
-  { title: 'Folder Name: Magnet Brains', numberOfEmailList: 2 },
-  { title: 'Folder Name: Magnet Brains', numberOfEmailList: 2 },
+  { title: 'Folder Name: Pabbly', numberOfEmailList: 2 },
+  { title: 'Folder Name: Zapier', numberOfEmailList: 2 },
   { title: 'Folder Name: Magnet Brains', numberOfEmailList: 2 },
   { title: 'Folder Name: Magnet Brains', numberOfEmailList: 2 },
   { title: 'Folder Name: Magnet Brains', numberOfEmailList: 2 },

@@ -24,51 +24,35 @@ import { Iconify } from 'src/components/iconify';
 const applications = [
   {
     title: 'View All Applications',
-    icon: '/assets/icons/appsicon/allapps.svg',
-    tooltip: 'Click here to see all Pabbly applications.',
-    link: 'https://accounts.pabbly.com/apps',
+    icon: '/assets/icons/files/ic-pdf.svg',
   },
   {
     title: 'Pabbly Connect',
-    icon: '/assets/icons/appsicon/connect.svg',
-    tooltip: 'Integrate different applications and start automating your work.',
-    link: 'https://accounts.pabbly.com/backend/access?project=connect',
+    icon: '/assets/icons/files/ic-pdf.svg',
   },
   {
     title: 'Pabbly Subscription Billing',
-    icon: '/assets/icons/appsicon/billing 2.svg',
-    tooltip: 'Start accepting one-time and recurring subscription payments.',
-    link: 'https://accounts.pabbly.com/backend/access?project=pabbly-subscriptions',
+    icon: '/assets/icons/files/ic-pdf.svg',
   },
   {
     title: 'Pabbly Email Marketing',
-    icon: '/assets/icons/appsicon/pem 2.svg',
-    tooltip: 'Send email newsletters to your subscribers and customers.',
-    link: 'https://accounts.pabbly.com/backend/access?project=mailget',
+    icon: '/assets/icons/files/ic-pdf.svg',
   },
   {
     title: 'Pabbly Form Builder',
-    icon: '/assets/icons/appsicon/pfb 2.svg',
-    tooltip: 'Create professional forms for your business with no code builder.',
-    link: 'https://accounts.pabbly.com/backend/access?project=formget',
+    icon: '/assets/icons/files/ic-pdf.svg',
   },
   {
     title: 'Pabbly Email Verification',
-    icon: '/assets/icons/appsicon/pev 2.svg',
-    tooltip: 'Verify your email list to remove invalid and bad emails.',
-
+    icon: '/assets/icons/files/ic-pdf.svg',
   },
   {
     title: 'Pabbly Hook',
-    icon: '/assets/icons/appsicon/hook 1.svg',
-    tooltip: 'Webhook event handling for scalable applications.',
-    link: 'https://accounts.pabbly.com/backend/access?project=hooks',
+    icon: '/assets/icons/files/ic-pdf.svg',
   },
   {
     title: 'Pabbly Chatflow',
-    icon: '/assets/icons/appsicon/chatflow.svg',
-    tooltip: 'Automate WhatsApp conversation effortlessly.',
-    link: 'https://accounts.pabbly.com/backend/access?project=chatflow',
+    icon: '/assets/icons/files/ic-pdf.svg',
   },
 ];
 
@@ -99,22 +83,22 @@ export default function UserPabblyAppsMenu() {
   return (
     <>
       {/* <Tooltip title="Click here to access other apps from pabbly." arrow placement="bottom"> */}
-        <IconButton
-          // onClick={handleClick}
-          sx={{
-            width: 40,
-            height: 40,
-            mr: 0,
-            borderRadius: '8px',
-            border: '1px solid',
-            borderColor: 'divider',
-            '&:hover': {
-              bgcolor: 'action.hover',
-            },
-          }}
-        >
-          <Iconify icon="bi:grid-3x3-gap-fill" style={{ width: 22, height: 22 }} />
-        </IconButton>
+      <IconButton
+        onClick={handleClick}
+        sx={{
+          width: 40,
+          height: 40,
+          mr: 0,
+          borderRadius: '8px',
+          border: '1px solid',
+          borderColor: 'divider',
+          '&:hover': {
+            bgcolor: 'action.hover',
+          },
+        }}
+      >
+        <Iconify icon="bi:grid-3x3-gap-fill" style={{ width: 22, height: 22 }} />
+      </IconButton>
       {/* </Tooltip> */}
       <Popover
         id={id}

@@ -13,10 +13,21 @@ export default function BigCard({
   subheading = '',
   showButton = true,
   buttonText = 'Verify Email',
-  buttonEndIcon = true
+  buttonEndIcon = true,
+  palyButton="true"
 }) {
   return (
-    <Card sx={{ p: 5, display: 'flex', justifyContent: 'space-between', gap: 3,flexDirection: { xs: "column", md: "row" } , ...sx }} >
+    <Card
+      sx={{
+        p: 5,
+        display: 'flex',
+        justifyContent: 'space-between',
+        gap: 3,
+        flexDirection: { xs: 'column', md: 'row' },
+        width:"100%",
+        ...sx,
+      }}
+    >
       {/* Left Section */}
       <Box
         component="div"
@@ -26,7 +37,7 @@ export default function BigCard({
           flexDirection: 'column',
           alignItems: 'start',
           gap: 2,
-          width: {xs:'100%',md:'60%'},
+          width: { xs: '100%', md: '60%' },
           // flexDirection: { xs: "column", md: "col" }
         }}
       >
@@ -37,7 +48,7 @@ export default function BigCard({
           </Typography>
         </Box>
 
-        <Box component="ul" sx={{width:{xs:"100%"},...style}}>
+        <Box component="ul" sx={{ width: { xs: '100%' }, ...style }}>
           {items.map((item, index) => (
             <li key={index}>
               <Typography variant="body2" fontWeight={500} color="#637381">
@@ -68,7 +79,9 @@ export default function BigCard({
                   styles={{ width: 18, height: 18 }}
                 />
               }
-              endIcon={buttonEndIcon && <Iconify icon="formkit:down" styles={{ width: 18, height: 18 }} />}
+              endIcon={
+                buttonEndIcon && <Iconify icon="formkit:down" styles={{ width: 18, height: 18 }} />
+              }
             >
               {buttonText}
             </Button>
@@ -91,10 +104,11 @@ export default function BigCard({
               width: '100%',
               cursor: 'pointer',
               objectFit: 'contain',
-              borderRadius: '16px ',
+              borderRadius: { sx: '1px', md: '16px' },
               backgroundColor: 'green',
             }}
           />
+        {palyButton && 
           <IconButton
             aria-label="play"
             sx={{
@@ -108,13 +122,18 @@ export default function BigCard({
               zIndex: 2,
               '@keyframes pulse': {
                 '0%': { transform: 'translate(-50%, -50%) scale(1)' },
-                '50%': { transform: 'translate(-50%, -50%) scale(1.2)', opacity:7 },
+                '50%': { transform: 'translate(-50%, -50%) scale(1.2)', opacity: 7 },
                 '100%': { transform: 'translate(-50%, -50%) scale(1)' },
               },
             }}
           >
-            <Iconify icon="icon-park-solid:play" width={50} height={50} sx={{backgroundColor:"white",borderRadius:8 , p:0}} />
-          </IconButton>
+            <Iconify
+              icon="icon-park-solid:play"
+              width={50}
+              height={50}
+              sx={{ backgroundColor: 'white', borderRadius: 8, p: 0 }}
+            />
+          </IconButton>}
         </Box>
       </Box>
     </Card>

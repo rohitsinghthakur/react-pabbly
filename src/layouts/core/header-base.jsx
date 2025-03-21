@@ -144,7 +144,6 @@ export function HeaderBase({
               {/* {isReportPage &&  */}
               {isAppRoute && <Searchbar data-slot="searchbar" data={data?.nav} />}
 
-              {/* } */}
               {isAppRoute && (
                 // <Tooltip title="Click here to purchase credits." arrow placement="bottom">
                   <Button

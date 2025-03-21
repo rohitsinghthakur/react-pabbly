@@ -35,7 +35,8 @@ export default function PageHeader({ title, description, showButton = true, butt
             color="primary"
             sx={{ width: { xs: "100%", sm: "auto" } }} // Full width on mobile
             startIcon={<Iconify icon="heroicons:plus-circle-16-solid" style={{ width: 18, height: 18 }} />}
-            endIcon={<Iconify icon="formkit:down" style={{ width: 18, height: 18 }} />}
+            endIcon={<Iconify icon="formkit:down" style={{ width: 18, height: 18 }} />
+          }
           >
             {buttonTitle}
           </Button>
