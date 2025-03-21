@@ -47,7 +47,7 @@ export const paths = {
     three: `${ROOTS.DASHBOARD}/three`,
     settings: {
       // root: `${ROOTS.app}/settings`,
-      credtis: `${ROOTS.DASHBOARD}/settings/credits`,
+      credits: `${ROOTS.DASHBOARD}/settings/credits`,
       api: `${ROOTS.DASHBOARD}/settings/api`,
       teamMembers: `${ROOTS.DASHBOARD}/settings/team-members`,
       activityLog: `${ROOTS.DASHBOARD}/settings/activity-log`,

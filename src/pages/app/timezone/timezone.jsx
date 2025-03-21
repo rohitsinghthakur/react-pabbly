@@ -11,7 +11,7 @@ import {
   Divider,
   Tooltip,
   useTheme,
-//   MenuItem,
+  // MenuItem,
   TextField,
   CardHeader,
   Typography,
@@ -41,10 +41,10 @@ export default function TimeZone() {
 
 
   // Get all available timezones using moment-timezone
-//   const timezones = moment.tz.names().map((tz) => ({
-//     value: tz,
-//     label: `(UTC ${moment.tz(tz).format('Z')}) ${tz.replace(/_/g, ' ')}`,
-//   }));
+  // const timezones = moment.tz.names().map((tz) => ({
+  //   value: tz,
+  //   label: `(UTC ${moment.tz(tz).format('Z')}) ${tz.replace(/_/g, ' ')}`,
+  // }));
 
   // Fetch timezone on component mount
 
@@ -59,9 +59,6 @@ export default function TimeZone() {
     setSearchTerm(event.target.value);
   };
 
-//   const filteredTimezones = timezones.filter(
-//     (tz) => tz.label.toLowerCase().includes(searchTerm.toLowerCase())
-//   );
 
   useEffect(() => {
     if (searchInputRef.current) {

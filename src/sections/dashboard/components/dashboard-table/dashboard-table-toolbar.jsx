@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useState,} from 'react';
 
 import Stack from '@mui/material/Stack';
 import MenuList from '@mui/material/MenuList';
@@ -11,7 +11,6 @@ import InputAdornment from '@mui/material/InputAdornment';
 import { Iconify } from 'src/components/iconify';
 import { usePopover, CustomPopover } from 'src/components/custom-popover';
 // ----------------------------------------------------------------------
-
 export function DashboardTableToolbar({
   filters,
   onResetPage,
@@ -25,14 +24,9 @@ export function DashboardTableToolbar({
   addMemberIconSx,
 }) {
   const popover = usePopover();
-
-  const handleFilterName = useCallback(
-    (event) => {
-      onResetPage();
-      filters.setState({ name: event.target.value });
-    },
-    [filters, onResetPage]
-  );
+  
+  const [searchbarValue, setSearchbarValue] = useState('');
+  const handleFilterName = (event) => {setSearchbarValue(event.target.value)};
 
   return (
     <>
@@ -45,7 +39,7 @@ export function DashboardTableToolbar({
         <Stack direction="row" alignItems="center" spacing={2} flexGrow={1} sx={{ width: 1 }}>
           <TextField
             fullWidth
-            value={filters.state.name}
+            value={searchbarValue}
             onChange={handleFilterName}
             placeholder="Search by email list name..."
             InputProps={{
@@ -55,6 +49,7 @@ export function DashboardTableToolbar({
                 </InputAdornment>
               ),
             }}
+           
           />
           {isAddMemberIcon && (
             <IconButton
@@ -69,8 +64,8 @@ export function DashboardTableToolbar({
                 pl: 2.5,
                 display: 'flex',
                 justifyContent: 'center',
-                alignItems:"center",
-                gap:1
+                alignItems: 'center',
+                gap: 1,
               }}
             >
               <Iconify icon="heroicons:plus-circle-16-solid" sx={{ with: '18px' }} />

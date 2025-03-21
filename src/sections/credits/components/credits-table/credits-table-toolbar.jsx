@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useState } from 'react';
 
 import Stack from '@mui/material/Stack';
 import MenuList from '@mui/material/MenuList';
@@ -18,13 +18,8 @@ import { usePopover, CustomPopover } from 'src/components/custom-popover';
 export function CreditsTableToolbar({ filters, onResetPage, dateError, icon, iconName = '',iconSx }) {
   const popover = usePopover();
 
-  const handleFilterName = useCallback(
-    (event) => {
-      onResetPage();
-      filters.setState({ name: event.target.value });
-    },
-    [filters, onResetPage]
-  );
+  const [searchbarValue, setSearchbarValue] = useState('');
+  const handleFilterName = (event) => {setSearchbarValue(event.target.value)};
 
   return (
     <>
@@ -65,7 +60,7 @@ export function CreditsTableToolbar({ filters, onResetPage, dateError, icon, ico
         <Stack direction="row" alignItems="center" spacing={2} flexGrow={1} sx={{ width: 1 }}>
           <TextField
             fullWidth
-            value={filters.state.name}
+            value={searchbarValue}
             onChange={handleFilterName}
             placeholder="Search by email list name..."
             InputProps={{
